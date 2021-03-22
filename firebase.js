@@ -1,22 +1,8 @@
-import * as firebase from 'firebase';
-
-
-
-
-
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig, "RandomApp");
-} else {
-    firebase.app("RandomApp");
-}
-
 import * as firebase from "firebase";
-import "firebase/firestore";
-import "firebase/auth";
 import { RANDOM_APP } from "./values";
 
 // Optionally import the services that you want to use
-//import "firebase/auth";
+import "firebase/auth";
 //import "firebase/database";
 import "firebase/firestore";
 //import "firebase/functions";

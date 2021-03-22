@@ -47,12 +47,12 @@ const RandomCloudView: FC<{ navigation: StackNavigationProp<any> }> = ({navigati
   useEffect(() => {
     const onFocus = () => {
       firestore.getItem().then((querySnapshot) => {
-        const historyObjects: CalculatorHistory[] = [];
+        const historyObjects: RandomGeneratorHistory[] = [];
         querySnapshot.forEach((doc) => {
-          historyObjects.push(doc.data() as CalculatorHistory);
+          historyObjects.push(doc.data() as RandomGeneratorHistory);
         });
 
-        setCalculatorHistory(historyObjects);
+        setRandomGeneratorHistory(historyObjects);
       });
     };
 
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CalculatorHistoryCloudView;
+export default RandomCloudView;
